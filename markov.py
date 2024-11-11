@@ -355,7 +355,7 @@ TODO: Handle punctuation and capitalization for better results
 text = text.lower() # lowercase everything to make sure there aren't random capitalized letters/words
 words = (re.findall(r'[\w]+|[^\s\w]', text)) # splits the text into words and punctuation
 for i in range(len(words) - 1):
-    current_word = words[i]
+    current_word = words[i] # current_word is now either a word or puntuation
     next_word = words[i + 1]
     if current_word not in transitions:
         transitions[current_word] = []
